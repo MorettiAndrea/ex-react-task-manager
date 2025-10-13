@@ -33,9 +33,12 @@ Definiamo due pagine principali:
 
 Lista dei Task (TaskList.jsx) → mostrerà l'elenco dei task.
 Aggiungi Task (AddTask.jsx) → conterrà il form per aggiungere un nuovo task.
+
 Aggiungere una barra di navigazione con NavLink, per permettere all'utente di spostarsi tra le pagine.
 
 Definire le rotte con Routes e Route, associando ogni percorso alla rispettiva pagina.
+
+<!-- segna librooooo -->
 
 📌 Milestone 2 - Setup Context API e Fetch Iniziale
 Creare un contesto globale per la gestione dei dati e recuperare la lista dei task dall'API.
