@@ -1,26 +1,19 @@
 import { createContext, useContext, useState, useEffect } from "react";
+import useTasks from "../../assets/custom-hooks/UseTasks";
 
 const TasksContext = createContext();
-const useTasks = () => {
+const useTaskContext = () => {
   return useContext(TasksContext);
 };
 
 function TasksProvider({ children }) {
-  const [tasks, setTasks] = useState([]);
-  const backendUrl = import.meta.env.VITE_BACKEND_URL;
-  useEffect(() => {
-    fetch(`${backendUrl}/tasks`)
-      .then((res) => res.json())
-      .then((res) => {
-        setTasks(res);
-      })
-      .catch((err) => console.error(err));
-  }, []);
-
+  const { tasks, setTasks, addTask, removeTask, updateTask } = useTasks();
   return (
-    <TasksContext.Provider value={{ tasks, setTasks }}>
+    <TasksContext.Provider
+      value={{ tasks, setTasks, addTask, removeTask, updateTask }}
+    >
       {children}
     </TasksContext.Provider>
   );
 }
-export { TasksProvider, useTasks };
+export { TasksProvider, useTaskContext };
