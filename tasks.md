@@ -82,8 +82,6 @@ Rendere disponibili le funzioni e la lista dei task restituendole come valore de
 
 Integrare useTasks() nel GlobalContext, in modo che tutti i componenti possano accedere ai task e alle funzioni di gestione.
 
-<!-- ____________________________________________segna libro______________________________________________ -->
-
 📌 Milestone 5 - Creazione del Form per Aggiungere un Task
 Creare un form per aggiungere un task, senza ancora inviare i dati all'API.
 Aggiornare la pagina AddTask.jsx per contenere un form con i seguenti campi:
@@ -102,6 +100,9 @@ const symbols = "!@#$%^&\*()-\_=+[]{}|;:'\\",.<>?/`~";
 Gestione del Submit del Form:
 
 Al click del bottone "Aggiungi Task", il form deve SOLO stampare in console l’oggetto task con i valori inseriti (NON deve ancora essere inviata la richiesta all’API).
+
+<!-- ____________________________________________segna libro______________________________________________ -->
+
 📌 Milestone 6 - Integrazione dell'API per Aggiungere un Task (POST)
 Collegare il form di AddTask all'API e completare la funzione addTask in useTasks().
 
