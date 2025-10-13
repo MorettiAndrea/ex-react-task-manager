@@ -64,12 +64,12 @@ Strutturare TaskList.jsx come una tabella, con le intestazioni Nome, Stato, Data
 
 Creare un componente TaskRow.jsx, che rappresenta una singola riga della tabella e mostra solo le proprietà title, status e createdAt (escludendo description).
 
-<!-- ____________________________________________segna libro______________________________________________ -->
-
 Applicare uno stile differente alla colonna status, assegnando i seguenti colori di sfondo alle celle in base al valore dello stato:
 "To do" → rosso
 "Doing" → giallo
 "Done" → verde
+
+<!-- ____________________________________________segna libro______________________________________________ -->
 
 Utilizzare React.memo() su TaskRow.jsx per ottimizzare le prestazioni ed evitare render inutili.
 📌 Milestone 4 - Creazione del Custom Hook useTasks() (GET)
