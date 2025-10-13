@@ -1,11 +1,13 @@
 import React from "react";
 
-export default React.memo(function propRow({ prop }) {
+function TaskRow({ task }) {
   return (
     <tr>
-      <td>{prop.title}</td>
-      <td>{prop.status}</td>
-      <td>{prop.description}</td>
+      <td>{task.title}</td>
+      <td>{task.status}</td>
+      <td>{task.createdAt}</td>
     </tr>
   );
-});
+}
+
+export default React.memo(TaskRow);
