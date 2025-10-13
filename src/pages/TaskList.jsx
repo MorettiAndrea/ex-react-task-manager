@@ -3,7 +3,6 @@ import TaskRow from "../components/tables/TaskRow";
 
 export default function TaskList() {
   const { tasks } = useTasks();
-  console.log(tasks);
 
   return (
     <div className="container mt-5">
