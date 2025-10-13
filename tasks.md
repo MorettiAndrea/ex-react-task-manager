@@ -71,8 +71,6 @@ Applicare uno stile differente alla colonna status, assegnando i seguenti colori
 
 Utilizzare React.memo() su TaskRow.jsx per ottimizzare le prestazioni ed evitare render inutili.
 
-<!-- ____________________________________________segna libro______________________________________________ -->
-
 📌 Milestone 4 - Creazione del Custom Hook useTasks() (GET)
 Creare un custom hook per centralizzare la gestione dei task e semplificare l'accesso ai dati.
 
@@ -83,9 +81,11 @@ Definire le funzioni addTask, removeTask, updateTask all'interno di useTasks(), 
 Rendere disponibili le funzioni e la lista dei task restituendole come valore dell'hook.
 
 Integrare useTasks() nel GlobalContext, in modo che tutti i componenti possano accedere ai task e alle funzioni di gestione.
+
+<!-- ____________________________________________segna libro______________________________________________ -->
+
 📌 Milestone 5 - Creazione del Form per Aggiungere un Task
 Creare un form per aggiungere un task, senza ancora inviare i dati all'API.
-
 Aggiornare la pagina AddTask.jsx per contenere un form con i seguenti campi:
 
 Nome del task (title) → Input controllato (useState).

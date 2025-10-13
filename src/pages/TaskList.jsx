@@ -1,8 +1,8 @@
-import { useTasks } from "../components/contexts/TasksContext";
+import { useTaskContext } from "../components/contexts/TasksContext";
 import TaskRow from "../components/tables/TaskRow";
 
 export default function TaskList() {
-  const { tasks } = useTasks();
+  const { tasks } = useTaskContext();
 
   return (
     <div className="container mt-5">
