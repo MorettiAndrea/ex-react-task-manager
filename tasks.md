@@ -101,13 +101,13 @@ Gestione del Submit del Form:
 
 Al click del bottone "Aggiungi Task", il form deve SOLO stampare in console l’oggetto task con i valori inseriti (NON deve ancora essere inviata la richiesta all’API).
 
-<!-- ____________________________________________segna libro______________________________________________ -->
-
 📌 Milestone 6 - Integrazione dell'API per Aggiungere un Task (POST)
 Collegare il form di AddTask all'API e completare la funzione addTask in useTasks().
 
 Completare la funzione addTask in useTasks():
 La funzione deve ricevere un oggetto contenente le proprietà title, description e status.
+
+<!-- ____________________________________________segna libro______________________________________________ -->
 
 Effettuare una chiamata API POST /tasks, inviando l’oggetto come body in formato JSON.
 

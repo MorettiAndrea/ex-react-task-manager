@@ -7,7 +7,6 @@ export default function Addtask() {
 
   //  campo controllato
   const [newTaskTitle, setNewTaskTitle] = useState("");
-  const [newTask, setNewTask] = useState({});
 
   //  campi non controllati
 
@@ -25,7 +24,7 @@ export default function Addtask() {
     !newTaskTitle ||
     newTaskTitle.split("").some((char) => symbols.includes(char));
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (errors) {
@@ -36,13 +35,22 @@ export default function Addtask() {
     const description = descriptionRef.current.value.trim();
     const status = statusRef.current.value.trim();
 
-    const formTask = {
+    const newTask = {
       title: newTaskTitle,
       status: status,
       description: description,
     };
-    setNewTask(formTask);
-    console.log(formTask);
+
+    try {
+      console.log(tasks);
+
+      await addTask(newTask);
+      setNewTaskTitle("");
+      descriptionRef.current.value = "";
+      statusRef.current.value = "To do";
+    } catch (error) {
+      alert("Errore durante la creazione del task: ", error);
+    }
   };
   return (
     <div className="container mt-5">
@@ -53,6 +61,9 @@ export default function Addtask() {
           <label htmlFor="title" className="form-label">
             Titolo Task
           </label>
+          <p className={errors ? "text-danger" : "text-success"}>
+            {errors ? "Compila questo campo" : "Nome inserito correttamente"}
+          </p>
           <input
             type="text"
             className="form-control"
@@ -91,8 +102,16 @@ export default function Addtask() {
         </div>
 
         <div className="col-12 text-center">
-          <button type="submit" className="btn btn-primary mt-3">
-            Conferma
+          <button
+            type="submit"
+            className={
+              errors
+                ? "btn btn-primary mt-3 bg-danger"
+                : "btn btn-primary mt-3 bg-success"
+            }
+            disabled={errors}
+          >
+            {errors ? "Compila i campi" : "Conferma"}
           </button>
         </div>
       </form>

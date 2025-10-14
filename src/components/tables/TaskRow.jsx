@@ -13,7 +13,7 @@ function TaskRow({ task }) {
     <tr>
       <td>{task.title}</td>
       <td className={statusClass}>{task.status}</td>
-      <td>{task.createdAt}</td>
+      <td>{new Date(task.createdAt).toLocaleDateString()}</td>
     </tr>
   );
 }

@@ -11,7 +11,21 @@ export default function useTasks() {
       .then((res) => setTasks(res))
       .catch((err) => console.error(err));
   }, []);
-  const addTask = () => {};
+  const addTask = async (newTask) => {
+    const postTasks = await fetch(`${backendUrl}/tasks`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(newTask),
+    });
+    const data = await postTasks.json();
+
+    if (!data.success) {
+      throw new Error(alert(data.message));
+    } else {
+      setTasks((prev) => [...prev, data.task]);
+      alert("Task aggiu");
+    }
+  };
   const removeTask = () => {};
   const updateTask = () => {};
   return { tasks, setTasks, addTask, removeTask, updateTask };

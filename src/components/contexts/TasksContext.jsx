@@ -1,5 +1,5 @@
 import { createContext, useContext, useState, useEffect } from "react";
-import useTasks from "../../assets/custom-hooks/UseTasks";
+import useTasks from "../custom-hooks/UseTasks";
 
 const TasksContext = createContext();
 const useTaskContext = () => {
