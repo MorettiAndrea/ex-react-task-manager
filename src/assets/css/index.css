@@ -5,3 +5,12 @@ padding: 0;}
 .nav-link.active {
 color:red !important;
 }
+
+.no-decoration{
+    text-decoration: none;
+    color:black 
+}
+
+.no-decoration:hover{
+    color: red;
+}

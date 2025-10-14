@@ -130,8 +130,6 @@ Resettare il form.
 Se la funzione lancia un errore:
 Mostrare un alert con il messaggio di errore ricevuto.
 
-<!-- ____________________________________________segna libro______________________________________________ -->
-
 📌 Milestone 7 - Creazione della Pagina Dettaglio Task
 Creare la pagina TaskDetail.jsx, che visualizza i dettagli di un task
 
@@ -140,6 +138,8 @@ Rendere il title un link a /task/:id, in modo che cliccando sul nome del task si
 
 Aggiornare App.jsx per aggiungere la rotta TaskDetail.jsx
 Aggiungere la rotta /task/:id che caricherà il componente TaskDetail.jsx.
+
+<!-- ____________________________________________segna libro______________________________________________ -->
 
 Creare TaskDetail.jsx per mostrare:
 Nome (title)

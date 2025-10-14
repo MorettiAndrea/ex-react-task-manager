@@ -11,6 +11,7 @@ import DefaultLayout from "./components/layout-components/DefaultLayout";
 import HomePage from "./pages/HomePage";
 import Addtask from "./pages/AddTask";
 import TaskList from "./pages/TaskList";
+import TaskDetails from "./pages/TaskDetails";
 
 // altri import
 
@@ -26,6 +27,7 @@ export default function App() {
               <Route path={paths.HomePage} element={<HomePage />} />
               <Route path={paths.AddTask} element={<Addtask />} />
               <Route path={paths.TaskList} element={<TaskList />} />
+              <Route path={paths.TaskDetails} element={<TaskDetails />} />
             </Route>
           </Routes>
         </BrowserRouter>

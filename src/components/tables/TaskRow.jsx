@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function TaskRow({ task }) {
   const statusClass =
@@ -9,9 +10,14 @@ function TaskRow({ task }) {
       : task.status === "Done"
       ? "text-success"
       : "";
+
   return (
     <tr>
-      <td>{task.title}</td>
+      <td>
+        <Link className="no-decoration" to={`/task/${task.id}`}>
+          {task.title}
+        </Link>
+      </td>
       <td className={statusClass}>{task.status}</td>
       <td>{new Date(task.createdAt).toLocaleDateString()}</td>
     </tr>

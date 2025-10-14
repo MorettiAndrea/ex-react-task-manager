@@ -52,6 +52,7 @@ export default function Addtask() {
       alert("Errore durante la creazione del task: ", error);
     }
   };
+
   return (
     <div className="container mt-5">
       <h2 className="text-center mb-4">Aggiungi un nuovo Task</h2>
