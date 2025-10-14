@@ -1,14 +1,18 @@
-import { useParams } from "react-router-dom";
-import useTasks from "../components/custom-hooks/UseTasks";
+import { useParams, useNavigate } from "react-router-dom";
+import { useTaskContext } from "../components/contexts/TasksContext";
+import paths from "../assets/data/paths";
 
 export default function TaskDetails() {
   const { id } = useParams();
-  const { tasks } = useTasks();
+  const navigate = useNavigate();
+  const { tasks, removeTask } = useTaskContext();
 
   const targetTask = tasks.find((t) => t.id === parseInt(id));
 
-  const handleOnCLick = () => {
-    console.log(targetTask);
+  const handleOnCLick = async () => {
+    await removeTask(targetTask.id);
+    alert("Task rimossa con successo!Clicca per tornare alla pagina dei tasks");
+    navigate(paths.TaskList);
   };
 
   return !targetTask ? (

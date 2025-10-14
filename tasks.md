@@ -146,8 +146,6 @@ Stato (status)
 Data di creazione (createdAt)
 Un bottone "Elimina Task", che per ora stampa solo "Elimino task" in console.
 
-<!-- ____________________________________________segna libro______________________________________________ -->
-
 📌 Milestone 8 - Funzione di Eliminazione Task (DELETE)
 Aggiungere la funzionalità di eliminazione di un task con una chiamata API e aggiornare lo stato.
 
@@ -174,6 +172,9 @@ Mostrare un alert di conferma dell’avvenuta eliminazione.
 Reindirizzare l’utente alla lista dei task (/).
 Se la funzione lancia un errore:
 Mostrare un alert con il messaggio di errore ricevuto.
+
+<!-- ____________________________________________segna libro______________________________________________ -->
+
 📌 Milestone 9 - Componente Modal e Conferma Eliminazione Task
 Creare un componente Modal riutilizzabile e utilizzarlo per confermare l’eliminazione di un task.
 

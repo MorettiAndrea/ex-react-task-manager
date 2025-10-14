@@ -1,8 +1,11 @@
 import { useTaskContext } from "../components/contexts/TasksContext";
 import { useState, useRef } from "react";
+import { useNavigate } from "react-router-dom";
+import paths from "../assets/data/paths";
 
 export default function Addtask() {
   const { tasks, setTasks, addTask, removeTask, updateTask } = useTaskContext();
+  const navigate = useNavigate();
   const symbols = "!@#$%^&*()-_=+[]{}|;:'\\\",.<>?/`~";
 
   //  campo controllato
@@ -48,6 +51,10 @@ export default function Addtask() {
       setNewTaskTitle("");
       descriptionRef.current.value = "";
       statusRef.current.value = "To do";
+      alert(
+        "Task aggiunta con successo! Clicca per tornare alla pagina dei tasks"
+      );
+      navigate(paths.TaskList);
     } catch (error) {
       alert("Errore durante la creazione del task: ", error);
     }
