@@ -20,10 +20,11 @@ export default function useTasks() {
     const data = await postTasks.json();
 
     if (!data.success) {
-      throw new Error(alert(data.message));
+      alert(data.message);
+      throw new Error(data.message);
     } else {
       setTasks((prev) => [...prev, data.task]);
-      alert("Task aggiu");
+      alert("Task aggiunta con successo!");
     }
   };
   const removeTask = () => {};

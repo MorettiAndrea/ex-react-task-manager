@@ -107,8 +107,6 @@ Collegare il form di AddTask all'API e completare la funzione addTask in useTask
 Completare la funzione addTask in useTasks():
 La funzione deve ricevere un oggetto contenente le proprietà title, description e status.
 
-<!-- ____________________________________________segna libro______________________________________________ -->
-
 Effettuare una chiamata API POST /tasks, inviando l’oggetto come body in formato JSON.
 
 La chiamata API restituisce un oggetto con la seguente struttura:
@@ -131,6 +129,9 @@ Mostrare un alert di conferma dell’avvenuta creazione della task.
 Resettare il form.
 Se la funzione lancia un errore:
 Mostrare un alert con il messaggio di errore ricevuto.
+
+<!-- ____________________________________________segna libro______________________________________________ -->
+
 📌 Milestone 7 - Creazione della Pagina Dettaglio Task
 Creare la pagina TaskDetail.jsx, che visualizza i dettagli di un task
 
