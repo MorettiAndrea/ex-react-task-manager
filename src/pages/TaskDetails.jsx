@@ -8,7 +8,7 @@ import { useTaskContext } from "../components/contexts/TasksContext";
 import TaskDeleteModal from "../components/modals/TaskDeleteModal";
 
 export default function TaskDetails() {
-  const [showModal, setShowModal] = useState(false);
+  const [showDeleteModal, setShowDeleteModal] = useState(false);
   const { id } = useParams();
   const navigate = useNavigate();
   const { tasks, removeTask } = useTaskContext();
@@ -18,13 +18,13 @@ export default function TaskDetails() {
   // funzione mostra modale
 
   const handleShowModal = (e) => {
-    setShowModal(true);
+    setShowDeleteModal(true);
   };
 
   // funzione tasto annulla
 
   const handleOnClose = () => {
-    setShowModal(false);
+    setShowDeleteModal(false);
   };
   // funzione per eliminare
 
@@ -65,7 +65,7 @@ export default function TaskDetails() {
       <TaskDeleteModal
         title="Conferma eliminazione del task"
         content="Sei sicuro di voler eliminare questo task?"
-        show={showModal}
+        show={showDeleteModal}
         onClose={handleOnClose}
         onConfirm={handleOnConfirm}
         confirmText="Conferma"

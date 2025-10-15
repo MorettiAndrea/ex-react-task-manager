@@ -46,6 +46,6 @@ export default function TaskDeleteModal({
 
   return ReactDOM.createPortal(
     modalContent,
-    document.getElementById("modal-root")
+    document.getElementById("modal-root-delete")
   );
 }

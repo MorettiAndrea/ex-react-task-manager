@@ -211,9 +211,9 @@ La funzione updateTask deve controllare il valore di success nella risposta:
 Se success è true, aggiornare la task nello stato globale.
 Se success è false, lanciare un errore con message come testo.
 
-<!-- ___________________________________________________SEGNA LIBRO_________________________________________________________ -->
-
 Creare il componente EditTaskModal.jsx:
+
+<!-- ___________________________________________________SEGNA LIBRO_________________________________________________________ -->
 
 Deve accettare i seguenti props:
 show (boolean): determina se la modale è visibile.
