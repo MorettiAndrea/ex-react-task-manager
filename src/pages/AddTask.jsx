@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import paths from "../assets/data/paths";
 
 export default function Addtask() {
-  const { tasks, setTasks, addTask, removeTask, updateTask } = useTaskContext();
+  const { tasks, addTask } = useTaskContext();
   const navigate = useNavigate();
   const symbols = "!@#$%^&*()-_=+[]{}|;:'\\\",.<>?/`~";
 

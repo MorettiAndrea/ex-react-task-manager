@@ -43,6 +43,7 @@ export default function useTasks() {
       console.error(error);
     }
   };
+
   const updateTask = () => {};
   return { tasks, setTasks, addTask, removeTask, updateTask };
 }
