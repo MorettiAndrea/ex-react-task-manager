@@ -1,4 +1,4 @@
-import TaskDeleteModal from "../components/layout-components/TaskDeleteModal";
+import TaskDeleteModal from "../components/modals/TaskDeleteModal";
 export default function HomePage() {
   return (
     <>

@@ -191,8 +191,6 @@ Integrare il componente Modal in TaskDetail.jsx per confermare l'eliminazione:
 Quando l’utente clicca su "Elimina Task", deve aprirsi la modale di conferma.
 Se l’utente conferma, vengono eseguite le stesse operazioni della Milestone 8.
 
-<!-- ____________________________________________segna libro______________________________________________ -->
-
 📌 Milestone 10 - Modale e Funzione di Modifica Task (PUT)
 Creare una modale per modificare i dettagli di un task e aggiornare i dati tramite API.
 
@@ -212,6 +210,8 @@ La funzione updateTask deve controllare il valore di success nella risposta:
 
 Se success è true, aggiornare la task nello stato globale.
 Se success è false, lanciare un errore con message come testo.
+
+<!-- ___________________________________________________SEGNA LIBRO_________________________________________________________ -->
 
 Creare il componente EditTaskModal.jsx:
 
@@ -245,6 +245,9 @@ Mostrare un alert di conferma dell’avvenuta modifica.
 Chiudere la modale.
 Se la funzione lancia un errore:
 Mostrare un alert con il messaggio di errore ricevuto.
+
+<!-- 11 -->
+
 📌 Milestone 11 - Ordinamento delle Task
 Implementare un sistema di ordinamento nella tabella delle task, permettendo all'utente di ordinare i task in base a diversi criteri.
 
@@ -262,6 +265,9 @@ Ordinamento per title → alfabetico (localeCompare).
 Ordinamento per status → ordine predefinito: "To do" < "Doing" < "Done".
 Ordinamento per createdAt → confrontando il valore numerico della data (.getTime()).
 Applicare sortOrder per definire se l’ordine è crescente o decrescente.
+
+<!-- 12 -->
+
 📌 Milestone 12 - Ricerca dei Task con Debounce
 Aggiungere un campo di ricerca che permette all’utente di filtrare i task in base al nome, ottimizzando le prestazioni con debounce.
 

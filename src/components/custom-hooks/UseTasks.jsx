@@ -44,6 +44,27 @@ export default function useTasks() {
     }
   };
 
-  const updateTask = () => {};
+  const updateTask = async (currentTask) => {
+    try {
+      const modifyTask = await fetch(`${backendUrl}/tasks/${currentTask.id}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(currentTask),
+      });
+
+      const data = await modifyTask.json();
+      if (!data.success) {
+        throw new Error(data.message);
+      }
+      setTasks((prev) =>
+        prev.map((t) => (t.id === currentTask.id ? data.task : t))
+      );
+    } catch (err) {
+      alert(`errore nella modifica della task: ${err.message}`);
+      console.error(err);
+    }
+  };
   return { tasks, setTasks, addTask, removeTask, updateTask };
 }

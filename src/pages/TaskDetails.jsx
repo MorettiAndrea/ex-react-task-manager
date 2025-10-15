@@ -5,7 +5,7 @@ import { useState } from "react";
 // components import
 import paths from "../assets/data/paths";
 import { useTaskContext } from "../components/contexts/TasksContext";
-import TaskDeleteModal from "../components/layout-components/TaskDeleteModal";
+import TaskDeleteModal from "../components/modals/TaskDeleteModal";
 
 export default function TaskDetails() {
   const [showModal, setShowModal] = useState(false);
